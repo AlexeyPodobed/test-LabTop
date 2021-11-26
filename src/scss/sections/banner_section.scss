@@ -143,11 +143,29 @@
   @extend %flex-center;
   cursor: pointer;
   transition: $transition;
+  overflow: hidden;
+
+  &:after {
+    background: #fff;
+    content: "";
+    height: 150px;
+    left: -95px;
+    opacity: 0.2;
+    position: absolute;
+    top: -40px;
+    transform: rotate(35deg);
+    transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+  }
   &:hover {
     -webkit-box-shadow: 0px 5px 29px 3px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 5px 29px 3px rgba(34, 60, 80, 0.2);
     box-shadow: 0px 5px 29px 3px rgba(34, 60, 80, 0.2);
-    filter: brightness(130%);
+    &:after {
+      left: 120%;
+      transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
   }
   span {
     font-family: $font1;

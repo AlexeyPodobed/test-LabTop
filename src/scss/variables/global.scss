@@ -101,3 +101,23 @@ $font3: ProximaNova-boldX;
   transition: all 2s;
   transform: translateY(0%);
 }
+
+.banner-animation{
+  transition: transform 1.5s;
+}
+.banner-animation-hidden{
+  transform: translateX(-100vw);
+}
+
+.banner-content-animation{
+  transition: transform 1.5s;
+  animation: showBlock 1s linear forwards;
+}
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

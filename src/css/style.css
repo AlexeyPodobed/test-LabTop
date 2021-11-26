@@ -2,19 +2,19 @@
   font-family: "ProximaNova-reg";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/ProximaNova-Reg.otf"); }
+  src: url("../../fonts/ProximaNova-Reg.otf"); }
 
 @font-face {
   font-family: "ProximaNova-bold";
   font-style: normal;
   font-weight: 900;
-  src: url("../fonts/ProximaNova-Bold.otf"); }
+  src: url("../../fonts/ProximaNova-Bold.otf"); }
 
 @font-face {
   font-family: "ProximaNova-boldX";
   font-style: normal;
   font-weight: 900;
-  src: url("../fonts/ProximaNova-Xbold.otf"); }
+  src: url("../../fonts/ProximaNova-Xbold.otf"); }
 
 .page__title, .main__content-block {
   display: flex;
@@ -75,6 +75,22 @@ li {
   opacity: 1;
   transition: all 2s;
   transform: translateY(0%); }
+
+.banner-animation {
+  transition: transform 1.5s; }
+
+.banner-animation-hidden {
+  transform: translateX(-100vw); }
+
+.banner-content-animation {
+  transition: transform 1.5s;
+  animation: showBlock 1s linear forwards; }
+
+@keyframes showBlock {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -600,12 +616,27 @@ html, body {
   height: 74px;
   background: #fccf18;
   cursor: pointer;
-  transition: 0.3s; }
+  transition: 0.3s;
+  overflow: hidden; }
+  .banner__content-btn:after {
+    background: #fff;
+    content: "";
+    height: 150px;
+    left: -95px;
+    opacity: 0.2;
+    position: absolute;
+    top: -40px;
+    transform: rotate(35deg);
+    transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10; }
   .banner__content-btn:hover {
     -webkit-box-shadow: 0px 5px 29px 3px rgba(34, 60, 80, 0.2);
     -moz-box-shadow: 0px 5px 29px 3px rgba(34, 60, 80, 0.2);
-    box-shadow: 0px 5px 29px 3px rgba(34, 60, 80, 0.2);
-    filter: brightness(130%); }
+    box-shadow: 0px 5px 29px 3px rgba(34, 60, 80, 0.2); }
+    .banner__content-btn:hover:after {
+      left: 120%;
+      transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
   .banner__content-btn span {
     font-family: ProximaNova-reg;
     font-size: 22px;
