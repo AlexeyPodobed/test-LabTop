@@ -1,0 +1,120 @@
+.main__section {
+  width: 100%;
+  background: #233148;
+  padding-top: 180px;
+  padding-bottom: 195px;
+  position: relative;
+  z-index: 5;
+  .container {
+    position: relative;
+  }
+  @media (max-width: $screen-lg) {
+    padding-bottom: 0px;
+  }
+  @media (max-width: $screen-sm) {
+    padding-top: 135px;
+  }
+}
+.main__section-logo {
+  width: 585px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  pointer-events: none;
+}
+
+.page__title {
+  max-width: 480px;
+  font-family: $font3;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  @extend %flex-col;
+  position: relative;
+  &::before {
+    content: "";
+    background: url(../img/icons/titleDec.svg) no-repeat;
+    width: 27px;
+    height: 29px;
+    position: absolute;
+    top: -50px;
+  }
+  &.main__title {
+    color: #fff;
+  }
+  &.bottom__title {
+    color: #233148;
+  }
+  @media (max-width: $screen-sm) {
+    font-size: 30px;
+    line-height: 36px;
+    &::before{
+      width: 22px;
+    }
+  }
+}
+
+.main__content-wrap {
+  width: 100%;
+  padding-top: 120px;
+  @extend %flex-row;
+  flex-wrap: wrap;
+  @media (max-width: $screen-lg) {
+    padding-bottom: 180px;
+  }
+  @media (max-width: $screen-sm) {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+}
+.main__content-block {
+  width: calc(100% / 2);
+  padding: 0 60px 100px 100px;
+  @extend %flex-col;
+  .main__content-img {
+    width: 52px;
+    @media (max-width: $screen-sm) {
+      width: 37px;
+    }
+  }
+  @media (max-width: $screen-lg) {
+    padding: 20px 20px;
+  }
+  @media (max-width: $screen-sm) {
+    width: 100%;
+    padding: 20px 0 12px 0;
+  }
+}
+.main__content-title {
+  margin-top: 20px;
+  font-family: $font1;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 1.3px;
+  color: #fff;
+  @media (max-width: $screen-sm) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+.main__content-descr {
+  margin-top: 50px;
+  font-family: $font1;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0.4px;
+  color: #8796ae;
+  @media (max-width: $screen-sm) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 35px;
+  }
+}

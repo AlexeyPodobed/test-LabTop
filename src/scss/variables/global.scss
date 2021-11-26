@@ -1,0 +1,103 @@
+// position flex
+%flex-col {
+  display: flex;
+  flex-direction: column;
+}
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.body__section {
+  position: relative;
+  overflow: hidden;
+}
+
+// button settings
+button {
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s, background-color 0.3s, border 0.3s, box-shadow 0.3s;
+  transition-timing-function: ease;
+  transition: 0.3s;
+}
+input {
+  cursor: text;
+  outline: none;
+}
+textarea {
+  cursor: text;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+// transition
+$transition: 0.3s;
+$transition1s: 1s;
+
+//Breakpoints
+$screen-xs: 320px;
+$screen-xs-min: $screen-xs;
+
+$screen-sm: 576px;
+$screen-sm-min: $screen-sm;
+
+$screen-md: 768px;
+$screen-md-min: $screen-md;
+
+$screen-lg: 992px;
+$screen-lg-min: $screen-lg;
+
+$screen-xlg: 1200px;
+$screen-xlg-min: $screen-xlg;
+
+$screen-xs-max: ($screen-sm-min - 1); // до 575
+$screen-sm-max: ($screen-md-min - 1); // до 767
+$screen-md-max: ($screen-lg-min - 1); // до 991
+$screen-lg-max: ($screen-xlg-min - 1); // до 1199
+
+.hidden {
+  display: none !important;
+}
+
+//colors vars
+$white: #fff;
+$black: #000;
+
+// fonst vars
+$font1: ProximaNova-reg;
+$font2: ProximaNova-bold;
+$font3: ProximaNova-boldX;
+
+.container {
+  width: 96%;
+  max-width: 1172px;
+  margin: 0 auto;
+  @media (max-width: $screen-sm) {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+.element-animation {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 2s;
+  transform: translateY(0%);
+}

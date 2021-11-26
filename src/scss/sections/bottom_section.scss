@@ -1,0 +1,11 @@
+.bottom__section{
+    width: 100%;
+    min-height: 965px;
+    background: #EAEFF5;
+    position: relative;
+    padding-top: 420px;
+    @media (max-width: $screen-sm) {
+        min-height: 740px;
+        padding-top: 150px;
+    }
+}

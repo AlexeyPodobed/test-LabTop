@@ -1,0 +1,197 @@
+.banner__section {
+  width: 100%;
+  position: relative;
+  top: 85px;
+  z-index: 15;
+  .container {
+    position: relative;
+    overflow: visible;
+    @media (max-width: $screen-xlg) {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+  @media (max-width: $screen-lg) {
+    top: 10px;
+  }
+}
+.banner__content-bg {
+  position: absolute;
+  right: 0;
+  width: 1546px;
+  height: 310px;
+  overflow: visible;
+  background: #1f65d9;
+  display: flex;
+  justify-content: flex-end;
+  @media (max-width: $screen-xlg) {
+    width: 100%;
+    padding: 0 30px;
+  }
+  @media (max-width: $screen-lg) {
+    min-height: 410px;
+    position: relative;
+  }
+}
+.banner__content-wrap {
+  width: 100%;
+  max-width: 1172px;
+  @extend %flex-row;
+
+  @media (max-width: $screen-lg) {
+    flex-direction: column;
+  }
+}
+.banner__content-left {
+  width: 49%;
+  padding-top: 75px;
+  overflow: visible;
+  position: relative;
+  .banner__content-left__row {
+    width: 100%;
+    min-height: 235px;
+    @extend %flex-row;
+    overflow-y: hidden;
+    @media (max-width: $screen-lg) {
+      flex-direction: column;
+      overflow-y: visible;
+      min-height: 295px;
+      position: absolute;
+      bottom: 0;
+    }
+    @media (max-width: $screen-sm) {
+      min-height: 235px;
+    }
+  }
+
+  .banner__content-title {
+    position: relative;
+    max-width: 230px;
+    h3 {
+      font-family: $font2;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 39px;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    img {
+      position: absolute;
+      top: 6px;
+      left: 0;
+    }
+    @media (max-width: $screen-sm) {
+      max-width: 190px;
+      h3 {
+        font-size: 22px;
+        line-height: 28px;
+      }
+      img {
+        left: -30px;
+        width: 200px;
+      }
+    }
+  }
+  .banner__content-descr {
+    padding: 43px 25px 0 90px;
+    p {
+      font-family: $font1;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 34px;
+      letter-spacing: 0.5px;
+      color: #fff;
+    }
+    @media (max-width: $screen-xlg) {
+      padding: 43px 15px;
+    }
+    @media (max-width: $screen-lg) {
+      padding: 43px 0px;
+      width: 50%;
+    }
+    @media (max-width: $screen-sm) {
+      width: 100%;
+      max-width: 200px;
+      padding: 50px 0 0 0;
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+  @media (max-width: $screen-lg) {
+    width: calc(100% - 60px);
+    padding: 0;
+    position: absolute;
+    bottom: -20px;
+  }
+}
+
+.banner__content-btn {
+  position: relative;
+  top: -35px;
+  z-index: 10;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  height: 74px;
+  background: #fccf18;
+  @extend %flex-center;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    -webkit-box-shadow: 0px 5px 29px 3px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 29px 3px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 29px 3px rgba(34, 60, 80, 0.2);
+    filter: brightness(130%);
+  }
+  span {
+    font-family: $font1;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0.45714280009269714px;
+    text-transform: uppercase;
+  }
+  @media (max-width: $screen-lg) {
+    top: 15px;
+  }
+  @media (max-width: $screen-lg) {
+    top: 9px;
+    max-width: 280px;
+    height: 52px;
+    span {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
+
+.banner__content-right {
+  width: 49%;
+  overflow: visible;
+  position: relative;
+  z-index: 15;
+  img {
+    position: absolute;
+    top: -75px;
+    left: -65px;
+  }
+  @media (max-width: $screen-lg) {
+    position: absolute;
+    right: 0;
+    top: -100px;
+  }
+  @media (max-width: $screen-sm) {
+    top: 35px;
+    right: 45px;
+    img {
+      max-width: 465px;
+    }
+  }
+}
