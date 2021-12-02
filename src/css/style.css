@@ -2,19 +2,19 @@
   font-family: "ProximaNova-reg";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/ProximaNova-Reg.otf"); }
+  src: url("../fonts/ProximaNova-Reg.otf"); }
 
 @font-face {
   font-family: "ProximaNova-bold";
   font-style: normal;
   font-weight: 900;
-  src: url("../../fonts/ProximaNova-Bold.otf"); }
+  src: url("../fonts/ProximaNova-Bold.otf"); }
 
 @font-face {
   font-family: "ProximaNova-boldX";
   font-style: normal;
   font-weight: 900;
-  src: url("../../fonts/ProximaNova-Xbold.otf"); }
+  src: url("../fonts/ProximaNova-Xbold.otf"); }
 
 .page__title, .main__content-block {
   display: flex;
